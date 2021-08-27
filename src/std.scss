@@ -1,0 +1,12 @@
+$bc_color_dark: #e7e8ec;
+$bc_color_light: #fff;
+$dark_text_color: aliceblue;
+$text_color: lightskyblue;
+
+
+%component_hover {
+    &:hover{
+        color: $text_color;
+        cursor: pointer;
+    }
+}

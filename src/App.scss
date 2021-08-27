@@ -1,3 +1,8 @@
+@import "./StyleNull.scss";
+@import "./std.scss";
+body {
+    background: $bc_color_dark;
+    }
 .App {
-    background: #cccccc;
+    
 }
