@@ -3,6 +3,50 @@
 body {
     background: $bc_color_dark;
     }
-.App {
+.Container {
+    width: inherit;
+}
+
+.Form {
+  //display: block;
+  width: 400px;
+  background: $bc_color_light;
+  padding: 25px;
+  border-radius: 5px;
+  margin:  150px auto;
+  
+  span {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #5181b8 ;
+  }
+
+  input {
+    border: 1px solid gray;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 35px;
+    border-radius: 4px;
+    padding-left: 20px;
     
+  }
+  button {
+    //display: block;
+    //margin: 5px auto;
+    background: #5181b8;
+    height: 35px;
+    border-radius: 4px;
+    width: 100%;
+    margin: 0 50px 15px 0;
+    color:#fff;
+
+    
+  }
+  link {
+    width: 50%;
+    color: #5181b8;
+  }
 }
