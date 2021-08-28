@@ -20,7 +20,7 @@ body {
       margin-bottom: 15px;
       font-size: 20px;
       font-weight: 700;
-      color: #5181b8 ;
+      color: $main_color ;
   }
 
   input {
@@ -36,7 +36,7 @@ body {
   button {
     //display: block;
     //margin: 5px auto;
-    background: #5181b8;
+    background: $main_color;
     height: 35px;
     border-radius: 4px;
     width: 100%;
@@ -47,6 +47,12 @@ body {
   }
   link {
     width: 50%;
-    color: #5181b8;
+    color: $main_color;
   }
+}
+h2{
+  font-size: 28px;
+  font-weight: 600;
+  color: $main_color;
+  margin-bottom: 10px;
 }
