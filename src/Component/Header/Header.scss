@@ -7,8 +7,28 @@ header {
     height: 50px;
     border:1px solid $bc_color_dark;
     border-top: none;
-    a  {
-        float: right;
+    display: flex;
+    justify-content: space-between;
+    a {
         margin: 15px; 
+        color: $main_color ;
+        font-weight: 600;
+    }
+
+    nav{
+        display: block;
+        ul{
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            
+        }
+    }
+   
+    .Logo {
+        margin: 10px 0 10px 20px; 
+        font-size: 28px;
+        font-weight: 600;
+        color: $main_color;
     }
 }
