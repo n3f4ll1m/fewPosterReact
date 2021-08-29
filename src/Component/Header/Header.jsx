@@ -11,22 +11,27 @@ function Header(props) {
       <div className="Logo">
         <NavLink to="/profile">LOGO</NavLink>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/posts">Posts</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contacts">Contacts</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <NavLink onClick={logoutHandler} to="/login" className="Logout">
-        Logout
-      </NavLink>
+      <div className="NavBar">
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/posts">Posts</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contacts">Contacts</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="Logout">
+        <NavLink onClick={logoutHandler} to="/login" >
+          Logout
+        </NavLink>
+      </div>
+      
     </header>
   ) : (
     <div />
