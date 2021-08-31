@@ -2,14 +2,14 @@ import "./Header.scss";
 import { NavLink, withRouter } from "react-router-dom";
 function Header(props) {
   let logoutHandler = () => {
-    console.log("logouted");
+    //console.log("logouted");
     props.setIsLogined(false);
   };
 
   return props.isLogined ? (
     <header>
       <div className="Logo">
-        <NavLink to="/profile">LOGO</NavLink>
+        <NavLink to="/">LOGO</NavLink>
       </div>
       <div className="NavBar">
         <nav>
@@ -27,11 +27,10 @@ function Header(props) {
         </nav>
       </div>
       <div className="Logout">
-        <NavLink onClick={logoutHandler} to="/login" >
+        <NavLink onClick={logoutHandler} to="/login">
           Logout
         </NavLink>
       </div>
-      
     </header>
   ) : (
     <div />

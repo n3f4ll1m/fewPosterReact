@@ -1,23 +1,32 @@
 import "./Login.scss";
 import { NavLink, withRouter } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Login(props) {
   let data = {};
+  let [errorText, setErrorText] = useState("");
   let checkData = () => {
+    setErrorText("");
+    //console.log(data);
     if (data.Login === "admin" && data.Password === "admin") {
       console.log("OK");
+      //setErrorText("");
       props.setIsLogined(true);
-      props.history.push("/profile");
+      props.history.push("/");
     } else {
       console.log("Whats wrong");
+      console.log(data);
+      setErrorText("Wrong Login or Password");
     }
   };
   let inputHandler = (event) => {
     let name = event.target.name;
     let value = event.target.value;
     data[name] = value;
-    console.log(data);
   };
+  // useEffect(() => {
+  //   //console.log(data);
+  // }, [errorText]);
   return (
     <form className="Login Form">
       <span>LOGIN</span>
@@ -26,13 +35,16 @@ function Login(props) {
         onChange={inputHandler}
         type="text"
         placeholder="Login"
+        value={data.Login}
       />
       <input
         name="Password"
         onChange={inputHandler}
         type="password"
         placeholder="Password"
+        value={data.Password}
       />
+      <div className="ErrorText">{errorText}</div>
       <button type="button" onClick={checkData}>
         Sign In
       </button>

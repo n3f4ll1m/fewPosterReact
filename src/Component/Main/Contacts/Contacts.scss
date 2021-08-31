@@ -1,0 +1,27 @@
+@import "../../../std.scss";
+.Contacts {
+  background: $bc_color_light;
+  border: 1px solid $bc_color_dark;
+  margin-top: 60px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  min-height: 300px;
+  h2{
+    
+    margin-bottom: 20px;
+  }
+  .postDesc{
+    p{
+      margin-bottom: 10px;
+    }
+    span{
+      color: $main_color;
+      a:hover{
+        color: red;
+      }
+    }
+  }
+  
+  
+}
