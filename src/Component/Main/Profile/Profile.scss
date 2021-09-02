@@ -1,0 +1,25 @@
+@import "../../../std.scss";
+.Profile {
+  display: flex;
+  margin-top: 60px;
+  .avatar {
+    background: $bc_color_light;
+  border: 1px solid $bc_color_dark;
+  border-radius: 5px;
+  margin-right: 10px; 
+  img{
+    width: 240px;
+  }
+  }
+  .profDesc{
+  background: $bc_color_light;
+  border: 1px solid $bc_color_dark;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  //min-height: 300px;
+  p{
+    margin-bottom: 10px;
+  }
+  }
+}
