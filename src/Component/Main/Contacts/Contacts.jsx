@@ -1,7 +1,13 @@
 import "./Contacts.scss";
-function Contacts() {
+import { Redirect } from "react-router-dom";
+function Contacts(props) {
   return (
     <div className="Contacts">
+      {!props.isLogined ? (
+        <Redirect from="/contacts" to="/login" />
+      ) : (
+        <Redirect from="/contacts" to="/contacts" />
+      )}
       <h2>This is my contacts</h2>
       <div className="postDesc">
         <p>

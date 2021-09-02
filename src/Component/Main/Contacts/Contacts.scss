@@ -17,9 +17,11 @@
     }
     span{
       color: $main_color;
-      a:hover{
-        color: red;
       }
+    }
+    a {
+      span:hover{
+        color: red;
     }
   }
   
