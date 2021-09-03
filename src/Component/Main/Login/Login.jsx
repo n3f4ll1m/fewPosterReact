@@ -7,15 +7,12 @@ function Login(props) {
   let [errorText, setErrorText] = useState("");
   let checkData = () => {
     setErrorText("");
-    //console.log(data);
     if (data.Login === "admin" && data.Password === "admin") {
       console.log("OK");
-      //setErrorText("");
       props.setIsLogined(true);
       props.history.push("/");
     } else {
       console.log("Whats wrong");
-      console.log(data);
       setErrorText("Wrong Login or Password");
     }
   };

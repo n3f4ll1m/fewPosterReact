@@ -1,20 +1,20 @@
 import "./Posts.scss";
 import { Redirect } from "react-router-dom";
-import Post from "../Post/Post";
+import Post from "./Post/Post";
 import { useEffect, useState } from "react";
 function Posts(props) {
   const [respData, setRespData] = useState([]);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
-        console.log("resp", response);
+        //console.log("resp", response);
         return response.json();
       })
       .then((json) => {
         setRespData(json);
-        console.log("json", json);
+        //console.log("json", json);
       });
-    console.log("hello");
+    //console.log("hello");
   });
 
   return (
@@ -25,9 +25,16 @@ function Posts(props) {
         <Redirect from="/posts" to="/posts" />
       )}
 
-      {respData.map((item, iter) => (
-        <Post title={item.title} text={item.body + "   ..."} key={iter} />
-      ))}
+      {respData.map((item, index) => {
+        return (
+          <Post
+            title={item.title}
+            text={item.body + "   ..."}
+            key={item.id}
+            index={index}
+          />
+        );
+      })}
     </div>
   );
 }

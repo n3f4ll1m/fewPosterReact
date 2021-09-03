@@ -2,7 +2,6 @@ import "./Header.scss";
 import { NavLink, withRouter } from "react-router-dom";
 function Header(props) {
   let logoutHandler = () => {
-    //console.log("logouted");
     props.setIsLogined(false);
   };
 
