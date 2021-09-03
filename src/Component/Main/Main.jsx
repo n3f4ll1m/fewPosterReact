@@ -1,10 +1,11 @@
 import "./Main.scss";
+import PostDetails from "./Posts/PostDetails/PostDetails";
 import Posts from "./Posts/Posts";
 import Login from "./Login/Login";
 import RegForm from "./RegForm/RegForm";
 import About from "./About/About";
 import Contacts from "./Contacts/Contacts";
-import { Redirect, Switch, Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Profile from "./Profile/Profile";
 function Main(props) {
   return (
@@ -31,9 +32,11 @@ function Main(props) {
           <Route path="/about">
             <About isLogined={props.isLogined} />
           </Route>
+          <Route path="/posts/:index" exact component={PostDetails} />
           <Route path="/posts">
             <Posts isLogined={props.isLogined} />
           </Route>
+
           <Route>
             <h2>Error 404</h2>
             <div className="postDesc">This URL is invalid.</div>

@@ -1,0 +1,15 @@
+@import "../../../../std.scss";
+.Post {
+    background: $bc_color_light;
+    border: 1px solid $bc_color_dark;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    &:hover {
+        z-index: -1;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}    

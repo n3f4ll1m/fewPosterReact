@@ -1,0 +1,12 @@
+@import "../../../../std.scss";
+.PostDetails {
+    background: $bc_color_light;
+    border: 1px solid $bc_color_dark;
+    //cursor: pointer;
+    margin-top: 60px;
+    border-radius: 5px;
+    padding: 10px;
+    .postDesc {
+        margin-top: 10px;
+    }
+}   
